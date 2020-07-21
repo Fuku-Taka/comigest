@@ -1,0 +1,7 @@
+.contents_myPage.row
+  %p
+    = @nickname
+    さんの投稿一覧
+  .contents.row.flex
+    - @posts.each do |post|
+      = render partial: "posts/post", locals: { post: post }
